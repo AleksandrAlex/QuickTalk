@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "169804293834",
+    "project_id": "quick-talk-51ad0",
+    "storage_bucket": "quick-talk-51ad0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:169804293834:android:37d21611fd8ca807267633",
+        "android_client_info": {
+          "package_name": "com.example.quicktalk"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDj3S2Y4MReN4YxbNdX_K6UB1-zhFL5GDA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
