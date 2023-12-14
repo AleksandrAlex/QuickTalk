@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">Quick Talk</string>
+
+    <string name="login_screen_title">Login Screen</string>
+    <string name="email_hint_field">email</string>
+    <string name="password_hint_field">password</string>
+    <string name="login_button_text">Login</string>
+    <string name="forgot_password_text">Forgot password</string>
+    <string name="register_text">Register</string>
+    <string name="reset_password_button">Reset password</string>
+    <string name="registration_screen_title">Registration Screen</string>
+    <string name="name_hint_field">name</string>
+    <string name="last_name_hint_field">Last Name</string>
+    <string name="age_hint_field">How old are you?</string>
+    <string name="sign_up_button">Sign up</string>
+    <string name="forgot_password_screen_title">Forgot Password?</string>
+    <string name="logout_menu">Logout</string>
 </resources>
