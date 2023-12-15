@@ -57,7 +57,4 @@ class UsersFragment : Fragment() {
 
 
     }
-
-    // Add appbar with menu like in activity!!!
-
 }
