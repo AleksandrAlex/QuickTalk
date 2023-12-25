@@ -7,10 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.lifecycleScope
-import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
-import com.example.quicktalk.AuthorizationViewModel
+import com.example.quicktalk.models.AuthorizationViewModel
 import com.example.quicktalk.R
 import com.example.quicktalk.databinding.FragmentAuthorizationBinding
 

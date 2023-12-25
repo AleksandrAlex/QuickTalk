@@ -1,4 +1,4 @@
-package com.example.quicktalk
+package com.example.quicktalk.models
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

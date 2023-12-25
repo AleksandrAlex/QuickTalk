@@ -8,9 +8,8 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
-import com.example.quicktalk.AuthorizationViewModel
 import com.example.quicktalk.R
-import com.example.quicktalk.RegistrationViewModel
+import com.example.quicktalk.models.RegistrationViewModel
 import com.example.quicktalk.databinding.FragmentRegistrationBinding
 
 

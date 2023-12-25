@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
-import com.example.quicktalk.ResetPasswordViewModel
+import com.example.quicktalk.models.ResetPasswordViewModel
 import com.example.quicktalk.databinding.FragmentResetPasswordBinding
 
 class ResetPasswordFragment : Fragment() {
@@ -29,18 +29,18 @@ class ResetPasswordFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        resetPasswordViewModel.error.observe(viewLifecycleOwner){
+        resetPasswordViewModel.error.observe(viewLifecycleOwner) {
             Toast.makeText(context, "$it", Toast.LENGTH_LONG).show()
         }
 
-        resetPasswordViewModel.isSuccess.observe(viewLifecycleOwner){
+        resetPasswordViewModel.isSuccess.observe(viewLifecycleOwner) {
             Toast.makeText(context, "$it", Toast.LENGTH_LONG).show()
         }
 
         binding.run {
             loginButton.setOnClickListener {
                 val email = emailField.text.toString().trim()
-                    resetPasswordViewModel.resetPassword(email)
+                resetPasswordViewModel.resetPassword(email)
             }
         }
 
