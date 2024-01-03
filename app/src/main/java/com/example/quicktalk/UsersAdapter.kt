@@ -15,7 +15,7 @@ class UsersAdapter(val listener: ClickListener): ListAdapter<User, UsersAdapter.
         fun bind(user: User){
             binding.run {
                 userName.text = "${user.name} ${user.lastName}, ${user.age}"
-                if (user.isOnline){
+                if (user.isOnline == true){
                     onlineImage.setBackgroundResource(R.drawable.circle_green)
                 }
                 else{

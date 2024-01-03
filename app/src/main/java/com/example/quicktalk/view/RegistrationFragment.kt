@@ -37,9 +37,8 @@ class RegistrationFragment : Fragment() {
                 val password = passwordField.text.toString().trim()
                 val name = nameField.text.toString().trim()
                 val lastName = lastNameField.text.toString().trim()
-                Toast.makeText(it.context, "$email", Toast.LENGTH_LONG).show()
-
-                registrationViewModel.signUp(email = email, password = password, name = name, lastName = lastName)
+                val age = ageField.text.toString().trim().toInt()
+                registrationViewModel.signUp(email = email, password = password, name = name, lastName = lastName, age = age)
             }
         }
 

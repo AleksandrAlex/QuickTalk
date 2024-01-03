@@ -14,7 +14,8 @@ import com.example.quicktalk.data.User
 import com.example.quicktalk.UsersAdapter
 import com.example.quicktalk.models.UsersViewModel
 import com.example.quicktalk.databinding.FragmentUsersBinding
-import kotlin.random.Random
+import com.google.firebase.database.ktx.database
+import com.google.firebase.ktx.Firebase
 
 class UsersFragment : Fragment() {
 
@@ -23,7 +24,7 @@ class UsersFragment : Fragment() {
         ViewModelProvider(this)[UsersViewModel::class.java]
     }
 
-    private val usersAdapter = UsersAdapter(object :ClickListener{
+    private val usersAdapter = UsersAdapter(object : ClickListener {
         override fun onClick(user: User) {
             Toast.makeText(context, "${user.name}", Toast.LENGTH_LONG).show()
         }
@@ -47,18 +48,9 @@ class UsersFragment : Fragment() {
 
         binding.userList.adapter = usersAdapter
 
-
-        // todo replace mock data to users from DB
-        val list = mutableListOf<User>()
-
-        for (i in 1..30){
-            val user = User(id = "$i", name = "Alex$i", lastName = "Su$i", age = Random.nextInt(15, 99), isOnline = Random.nextBoolean())
-            list.add(user)
+        usersViewModel.users.observe(viewLifecycleOwner) { users ->
+            usersAdapter.submitList(users)
         }
-
-        usersAdapter.submitList(list)
-
-        //
 
         usersViewModel.user.observe(viewLifecycleOwner) {
             if (it == null) {
@@ -68,16 +60,16 @@ class UsersFragment : Fragment() {
         }
 
         binding.toolbar.setOnMenuItemClickListener {
-           when(it.itemId){
-               R.id.menu_item_logout -> {
-                   usersViewModel.logout()
-                   true
-               }
+            when (it.itemId) {
+                R.id.menu_item_logout -> {
+                    usersViewModel.logout()
+                    true
+                }
 
-               else -> {false}
-           }
+                else -> {
+                    false
+                }
+            }
         }
-
-
     }
 }
